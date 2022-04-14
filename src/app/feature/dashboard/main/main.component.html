@@ -1,0 +1,13 @@
+<div class="container">
+  <ya-map [state]="{
+      controls: [
+        'zoomControl',
+        'searchControl',
+        'typeSelector',
+        'fullscreenControl'
+      ]
+    }" [center]="[40.1872, 44.5152]" [zoom]="12" (ready)="onMapReady($event)">
+    <ya-control (ready)="onSecondButtonReady($event)" type="RoutePanel"></ya-control>
+    <ya-placemark [geometry]="[40.1872, 44.5152]"></ya-placemark>
+  </ya-map>
+</div>
